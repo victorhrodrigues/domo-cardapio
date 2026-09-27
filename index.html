@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Cardápio - Domo</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #2b2b2b;
+            /* Fundo neutro elegante */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 4px;
+        }
+
+        /* Paginação discreta e elegante no rodapé */
+        .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 0.5;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #c5a059;
+            /* Dourado combinando com o tema */
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Páginas de 1 a 12 -->
+            <div class="swiper-slide"><img src="cardapio_webp/1.webp" alt="Página 1" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/2.webp" alt="Página 2" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/3.webp" alt="Página 3" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/4.webp" alt="Página 4" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/5.webp" alt="Página 5" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/6.webp" alt="Página 6" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/7.webp" alt="Página 7" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/8.webp" alt="Página 8" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/9.webp" alt="Página 9" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/10.webp" alt="Página 10" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/11.webp" alt="Página 11" /></div>
+            <div class="swiper-slide"><img src="cardapio_webp/12.webp" alt="Página 12" /></div>
+        </div>
+
+        <!-- Indicador de bolinhas embaixo -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: false,
+            speed: 350,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            keyboard: {
+                enabled: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
